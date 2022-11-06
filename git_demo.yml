@@ -1,0 +1,12 @@
+---
+
+- name: Demo Git Module
+  hosts: all
+  tasks:
+
+    - name: Clone a repo
+      ansible.builtin.git:
+        repo: https://github.com/Kiefferflo/GithubAction.git
+        dest: /home/cytech/sandbox/clone
+        clone: yes
+        update: yes
