@@ -1,0 +1,4 @@
+all:
+  hosts:
+    sandbox:
+      ansible_host: 127.0.0.7
