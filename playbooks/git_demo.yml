@@ -14,10 +14,6 @@
 - name: Deploying repo Content
   hosts: all
   tasks:
-    - name : test
-      ansible.builtin.shell:
-        chdir: /home/cytech/sandbox/clone/
-        cmd: touch test
     - name : Installing angular
       ansible.builtin.shell:
         chdir: /home/cytech/sandbox/clone/
