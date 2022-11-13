@@ -10,3 +10,23 @@
         dest: /home/cytech/sandbox/clone
         clone: yes
         update: yes
+        
+- name: Deploying repo Content
+  hosts: all
+  tasks:
+    - name : test
+      ansible.builtin.shell:
+        chdir: /home/cytech/sandbox/clone/
+        cmd: touch test
+    - name : Installing angular
+      ansible.builtin.shell:
+        chdir: /home/cytech/sandbox/clone/
+        cmd: npm install -g @angular/cli@14.2.5
+    - name : Installing nmp
+      ansible.builtin.shell:
+        chdir: /home/cytech/sandbox/clone/
+        cmd: npm install
+    - name : Deploying
+      ansible.builtin.shell:
+        chdir: /home/cytech/sandbox/clone/
+        cmd: ng build
