@@ -1,7 +1,7 @@
 ---
 
 - name: Demo Git Module
-  hosts: vm
+  hosts: all
   tasks:
 
     - name: Clone a repo

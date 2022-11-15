@@ -2,6 +2,7 @@ all:
   hosts:
     sandbox:
       ansible_host: 127.0.0.1
+      ansible_connection: local
     vm:
       ansible_host: 192.168.100.234
       ansible_user: root
